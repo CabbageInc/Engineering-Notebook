@@ -8,3 +8,6 @@ Concepts To Learn:
 	- for FPGA development
 - AXI Stream
 	- data format for bit streams in Xilinx hardware
+- Fast Fourier Transform (FFT)
+	- convert time domain to frequency domain
+	- sort frequencies into bins
