@@ -1,0 +1,10 @@
+Concepts To Learn:
+- Numerically Controlled Oscillator (NCO)
+	- Phase Accumulator (PA)
+	- Phase to Amplitude Converter (PAC)
+- VHDL
+	- for FPGA development
+- Vivado
+	- for FPGA development
+- AXI Stream
+	- data format for bit streams in Xilinx hardware
