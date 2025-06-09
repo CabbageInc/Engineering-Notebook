@@ -11,3 +11,5 @@ Concepts To Learn:
 - Fast Fourier Transform (FFT)
 	- convert time domain to frequency domain
 	- sort frequencies into bins
+- CASPER
+	- toolchain for smooth radio astronomy workflow
