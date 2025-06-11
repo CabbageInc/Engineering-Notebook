@@ -35,7 +35,27 @@ wire \[7:0] w;
 - dimensions, i.e. width, always comes before the name in a declaration
 - vectors are sometimes referred to as a "bus" when used as a wire (because they contain multiple lines)
 
+Vector Declaration Formatting:
+type \[upper : lower] name;
+- type is usually either "wire" or "register"
+- can be prefaced with "input" or "output" to function as a port
+- type is inferred as wire unless specified
+- upper and lower specify the numbering and range of the bits
+- lower can be non-zero, i.e. positive or negative integer
+- upper can be greater than lower, i.e. bit numbering can be increasing rather than decreasing
+- "endianness" = the numbering direction of the register
+	- e.g. "little-endian" = \[3:0] and "big-endian" = \[0:3]
+- endianness of a vector cannot change after declaration
+
 Vector Part Select:
 assign out = w\[4];
 - connects (assigns) bit number 4 of the vector w to the wire out
 - i.e. bit number 4 was "selected"
+
+Implicit Net Types:
+- Default type of a net is always a 1-bit wire
+- wires can be created implicitly with: assign name = value;
+	- as opposed to first declaring: wire \[upper : lower] name;
+- also implicitly created: module_type name(a, b);
+	- a and b are implicitly 1-bit wires
+- implicit net creation can be disabled: `default_nettype none
