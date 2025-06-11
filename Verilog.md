@@ -51,6 +51,9 @@ Vector Part Select:
 assign out = w\[4];
 - connects (assigns) bit number 4 of the vector w to the wire out
 - i.e. bit number 4 was "selected"
+- can be used to select multiple bits, i.e. parts, of a vector
+	- assume that: wire \[7:0] num;
+	- then, num\[3:0] selects the lower four bits of num (least significant bits)
 
 Implicit Net Types:
 - Default type of a net is always a 1-bit wire
@@ -59,3 +62,8 @@ Implicit Net Types:
 - also implicitly created: module_type name(a, b);
 	- a and b are implicitly 1-bit wires
 - implicit net creation can be disabled: `default_nettype none
+
+Create a Module:
+module module_name(input a, b, c, ..., output e, f, g, ...);
+	// module body goes here
+endmodule
