@@ -28,7 +28,14 @@ logical OR: ||
 XOR Operator:
 single bit: ^
 
-Vector:
+Vector Declaration:
 wire \[7:0] w;
 - declares an 8-bit vector (bits numbered 7 down to 0)
 - functionally equivalent to having 8 separate wires
+- dimensions, i.e. width, always comes before the name in a declaration
+- vectors are sometimes referred to as a "bus" when used as a wire (because they contain multiple lines)
+
+Vector Part Select:
+assign out = w\[4];
+- connects (assigns) bit number 4 of the vector w to the wire out
+- i.e. bit number 4 was "selected"
